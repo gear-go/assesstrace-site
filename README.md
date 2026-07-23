@@ -1,98 +1,76 @@
-# vinext-starter
+# AssessTrace — Evidence by Design
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Sitio público de AssessTrace, respaldado por la Universidad del Desarrollo (UDD).
 
-## Prerequisites
+AssessTrace ayuda a rediseñar la evaluación para que el proceso de aprendizaje deje evidencia en cursos donde se utiliza IA generativa. GPT-5.6 comprende y propone; el docente decide; un motor determinista verifica; Canvas MDS implementa estructuras controladas en Canvas.
 
-- Node.js `>=22.13.0`
+## Estado
 
-## Quick Start
+- Sitio completo y funcional.
+- Seis rutas públicas.
+- Diagnóstico interactivo que genera un prompt inicial para Codex.
+- Sin base de datos, almacenamiento remoto ni variables secretas.
+- Compilación de producción validada.
+- Pendiente: crear y publicar el proyecto con una cuenta de ChatGPT que tenga Sites habilitado.
 
-```bash
-npm install
+La cuenta utilizada durante el desarrollo no pudo crear el proyecto remoto porque Sites respondió: `Project owner is not linked to an account`. No se guardó ningún `project_id` inválido.
+
+## Documentación para retomar
+
+- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md): propósito, historia, usuarios, metodología, contenido y decisiones de producto.
+- [CHATGPT_SITES_HANDOFF.md](CHATGPT_SITES_HANDOFF.md): instrucciones completas para abrir esta carpeta desde otra cuenta y publicar.
+- [AGENTS.md](AGENTS.md): reglas operativas para cualquier agente Codex que trabaje en este repositorio.
+
+## Ejecución local
+
+Requiere Node.js 22.13 o superior.
+
+```powershell
+npm ci
 npm run dev
+```
+
+Abrir la URL local que informe el servidor. Si el puerto predeterminado está ocupado:
+
+```powershell
+npm run dev -- --port 3001
+```
+
+Validación de producción:
+
+```powershell
 npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+## Rutas
 
-## Included Shape
+| Ruta | Propósito |
+|---|---|
+| `/` | Tesis del producto y recorridos por audiencia |
+| `/docentes` | Experiencia inicial para docentes |
+| `/directivos` | Valor, gobernanza y piloto institucional |
+| `/metodologia` | Metodología Evidence by Design |
+| `/diagnostico` | Diagnóstico guiado y generación local del prompt |
+| `/acceso` | Solicitud de acceso operativo |
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+## Privacidad y seguridad
 
-## Workspace Auth Headers
+- El diagnóstico se ejecuta completamente en el navegador.
+- Las respuestas no se envían ni se almacenan.
+- No se solicitan nombres, RUT, correos, notas, trabajos ni otros datos personales de estudiantes.
+- La web no publica ni elimina contenido en Canvas.
+- AssessTrace no califica ni infiere autoría.
+- El acceso operativo se solicita escribiendo a `gagomez@udd.cl` e indicando nickname de GitHub, motivo y contexto de uso.
 
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
+## Arquitectura
 
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
+- Next.js 16 y React 19.
+- Vinext/Vite con salida compatible con ChatGPT Sites.
+- CSS propio y responsive.
+- Metadatos Open Graph y tarjeta social en `public/og.png`.
+- `.openai/hosting.json` sin `project_id` hasta que una cuenta habilitada cree el proyecto.
+- D1 y R2 no se utilizan.
 
-Treat the full name as optional and fall back to email when it is absent:
+## Contacto
 
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
-```
-
-## Optional Dispatch-Owned ChatGPT Sign-In
-
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
-
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+`gagomez@udd.cl`
