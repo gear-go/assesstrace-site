@@ -118,8 +118,9 @@ La superficie para docentes es:
 - Debe servir a docentes y a directivas no expertas en Codex.
 - Debe incluir un diagnóstico que genere el prompt inicial.
 - El diagnóstico no debe enviar ni almacenar respuestas.
-- Para obtener acceso operativo se debe escribir a `gagomez@udd.cl`.
-- La solicitud debe incluir nickname de GitHub, por qué se quiere usar y para qué curso, evaluación o proyecto.
+- El plugin se distribuye públicamente desde `https://github.com/gear-go/canvas-mds-build-week`.
+- La página de acceso debe entregar las instrucciones de instalación en Codex.
+- Para un piloto acompañado se debe escribir a `gagomez@udd.cl`; la solicitud incluye nickname de GitHub, por qué se quiere usar y para qué curso, evaluación o proyecto.
 
 ## Diagnóstico interactivo
 
@@ -169,7 +170,7 @@ Explica Evidence by Design, las cuatro responsabilidades y el HARD STOP.
 
 ### Acceso
 
-El acceso a la web y al diagnóstico es público. El acceso operativo al plugin es controlado y se solicita por correo.
+El acceso a la web, al diagnóstico y al repositorio del plugin es público. El acompañamiento inicial para pilotos se solicita por correo.
 
 ## Identidad y tono
 

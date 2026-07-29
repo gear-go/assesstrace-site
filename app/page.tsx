@@ -7,6 +7,8 @@ const roles = [
   ["Docente", "Decide", "Confirma, modifica o rechaza cada decisión que cambia el diseño de la evaluación."],
   ["Motor determinista", "Verifica", "Comprueba trazabilidad, ponderaciones, decisiones pendientes y límites de seguridad."],
 ] as const;
+const referenceCaseUrl =
+  "https://github.com/gear-go/canvas-mds-build-week/blob/main/plugins/canvas-mds/assets/judge-case/reference/before-after.md";
 
 export default function Home() {
   return (
@@ -40,6 +42,62 @@ export default function Home() {
           <div className="shift-state after-state"><span>Cuando diseñamos la evidencia</span><strong>Proceso + producto</strong><p>Hitos, decisiones, versiones, respuesta al feedback y verificación individual dejan una trazabilidad evaluable.</p></div>
         </div>
         <p className="evidence-caption">El caso de referencia demuestra este cambio en un curso sanitizado; no se presenta como una receta universal.</p>
+      </section>
+      <section className="section example-section" id="caso">
+        <div className="shell example-layout">
+          <div className="example-intro">
+            <p className="example-label">Caso sanitizado de referencia</p>
+            <h2>De una nota difícil de interpretar a evidencia que permite decidir.</h2>
+            <p>AssessTrace no “mejora una rúbrica” en abstracto. Reconcilia los objetivos, la evaluación actual, la política de IA y la carga docente; identifica qué aprendizaje sigue invisible; y compara alternativas antes de preparar cualquier cambio.</p>
+          </div>
+          <div className="example-story">
+            <article className="example-step">
+              <span className="example-step-number">01</span>
+              <div>
+                <p className="example-step-label">Evaluación inicial</p>
+                <h3>Un proyecto grupal concentra casi toda la evidencia.</h3>
+                <p>La entrega final puede ser excelente, pero no permite distinguir quién encuadró el problema, qué decisiones se verificaron o cómo respondió cada integrante al feedback.</p>
+                <div className="weight-bar weight-before" aria-label="95 por ciento producto final y 5 por ciento verificación individual">
+                  <span>95% producto final</span>
+                  <span>5%</span>
+                </div>
+              </div>
+            </article>
+            <article className="example-step">
+              <span className="example-step-number">02</span>
+              <div>
+                <p className="example-step-label">Diagnóstico AssessTrace</p>
+                <h3>La brecha no es “uso de IA”; es evidencia insuficiente.</h3>
+                <p>El sistema hace visibles las fuentes, formula solo preguntas capaces de cambiar el diseño y aplica un HARD STOP hasta que el docente confirme objetivos, carga y decisiones materiales.</p>
+                <ul className="example-signals">
+                  <li>Decisiones y alternativas descartadas</li>
+                  <li>Iteraciones y respuesta al feedback</li>
+                  <li>Contribución y comprensión individual</li>
+                </ul>
+              </div>
+            </article>
+            <article className="example-step example-step-result">
+              <span className="example-step-number">03</span>
+              <div>
+                <p className="example-step-label">Rediseño aprobado</p>
+                <h3>Producto, proceso y verificación dejan rastros distintos.</h3>
+                <p>El caso resultante incorpora hitos revisables, evidencia de decisiones y una comprobación individual. El motor valida trazabilidad y ponderaciones antes de generar una estructura no publicada para Canvas.</p>
+                <div className="weight-bar weight-after" aria-label="40 por ciento producto final, 55 por ciento proceso y 5 por ciento verificación individual">
+                  <span>40% producto</span>
+                  <span>55% proceso</span>
+                  <span>5%</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div className="example-outcome">
+            <div>
+              <strong>El poder está en cambiar lo que la evaluación puede demostrar.</strong>
+              <p>No en vigilar más ni en automatizar la autoridad pedagógica.</p>
+            </div>
+            <a className="button button-secondary" href={referenceCaseUrl} target="_blank" rel="noreferrer">Ver el caso técnico en GitHub</a>
+          </div>
+        </div>
       </section>
       <section className="section responsibility-section">
         <div className="shell"><div className="section-heading compact-heading"><h2>La IA propone. La autoridad pedagógica no se automatiza.</h2></div><div className="role-bands">{roles.map(([label, title, copy]) => <article className="role-band" key={label}><span>{label}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div>

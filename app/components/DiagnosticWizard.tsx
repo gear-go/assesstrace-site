@@ -273,7 +273,7 @@ export function DiagnosticWizard() {
           <div className="prompt-result" aria-live="polite">
             <div className="result-heading"><div><span>Prompt generado localmente</span><h3>Listo para iniciar en Codex</h3></div><span className="local-badge">No enviado</span></div>
             <textarea aria-label="Prompt inicial generado" value={prompt} onChange={(event) => setPrompt(event.target.value)} rows={20} />
-            <div className="button-row"><button className="button button-primary" type="button" onClick={copyPrompt}>{copyState === "copied" ? "Prompt copiado" : "Copiar prompt"}</button><button className="button button-secondary" type="button" onClick={downloadPrompt}>Descargar Markdown</button><Link className="button button-secondary" href="/acceso">Solicitar acceso</Link></div>
+            <div className="button-row"><button className="button button-primary" type="button" onClick={copyPrompt}>{copyState === "copied" ? "Prompt copiado" : "Copiar prompt"}</button><button className="button button-secondary" type="button" onClick={downloadPrompt}>Descargar Markdown</button><Link className="button button-secondary" href="/acceso">Instalar AssessTrace</Link></div>
             {copyState === "error" && <p className="field-error" role="alert">No fue posible copiar automáticamente. Selecciona el texto y cópialo manualmente.</p>}
           </div>
         )}

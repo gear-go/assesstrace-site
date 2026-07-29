@@ -11,9 +11,8 @@ AssessTrace ayuda a rediseñar la evaluación para que el proceso de aprendizaje
 - Diagnóstico interactivo que genera un prompt inicial para Codex.
 - Sin base de datos, almacenamiento remoto ni variables secretas.
 - Compilación de producción validada.
-- Pendiente: crear y publicar el proyecto con una cuenta de ChatGPT que tenga Sites habilitado.
-
-La cuenta utilizada durante el desarrollo no pudo crear el proyecto remoto porque Sites respondió: `Project owner is not linked to an account`. No se guardó ningún `project_id` inválido.
+- Publicado en Cloudflare Workers: `https://assesstrace-site.assesstrace-udd.workers.dev/`.
+- Código fuente público: `https://github.com/gear-go/assesstrace-site`.
 
 ## Documentación para retomar
 
@@ -51,7 +50,7 @@ npm run build
 | `/directivos` | Valor, gobernanza y piloto institucional |
 | `/metodologia` | Metodología Evidence by Design |
 | `/diagnostico` | Diagnóstico guiado y generación local del prompt |
-| `/acceso` | Solicitud de acceso operativo |
+| `/acceso` | Repositorio público, instalación del plugin y piloto acompañado |
 
 ## Privacidad y seguridad
 
@@ -60,7 +59,8 @@ npm run build
 - No se solicitan nombres, RUT, correos, notas, trabajos ni otros datos personales de estudiantes.
 - La web no publica ni elimina contenido en Canvas.
 - AssessTrace no califica ni infiere autoría.
-- El acceso operativo se solicita escribiendo a `gagomez@udd.cl` e indicando nickname de GitHub, motivo y contexto de uso.
+- El plugin se instala desde el marketplace público en `https://github.com/gear-go/canvas-mds-build-week`.
+- Para un piloto acompañado se escribe a `gagomez@udd.cl` indicando nickname de GitHub, motivo y contexto de uso.
 
 ## Arquitectura
 
@@ -68,7 +68,7 @@ npm run build
 - Vinext/Vite con salida compatible con ChatGPT Sites.
 - CSS propio y responsive.
 - Metadatos Open Graph y tarjeta social en `public/og.png`.
-- `.openai/hosting.json` sin `project_id` hasta que una cuenta habilitada cree el proyecto.
+- `.openai/hosting.json` conserva el `project_id` opaco asignado previamente y no declara recursos de datos.
 - D1 y R2 no se utilizan.
 
 ## Contacto

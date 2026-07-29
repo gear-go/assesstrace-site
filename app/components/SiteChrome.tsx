@@ -44,7 +44,7 @@ export function SiteFooter() {
           <Link href="/docentes">Para docentes</Link>
           <Link href="/directivos">Para directivos</Link>
           <Link href="/metodologia">Evidence by Design</Link>
-          <Link href="/acceso">Solicitar acceso</Link>
+          <Link href="/acceso">Instalar AssessTrace</Link>
         </div>
         <div className="footer-contact">
           <p>Contacto</p>

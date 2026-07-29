@@ -1,5 +1,10 @@
 # Relevo para publicar AssessTrace con otra cuenta de ChatGPT
 
+> Nota de estado: el sitio ya está publicado públicamente en Cloudflare Workers en
+> `https://assesstrace-site.assesstrace-udd.workers.dev/`. Este documento conserva
+> el procedimiento histórico de ChatGPT Sites; antes de reutilizarlo se debe leer
+> el `project_id` existente en `.openai/hosting.json` y nunca crear un duplicado.
+
 ## Objetivo
 
 Abrir esta misma carpeta desde una cuenta de ChatGPT con Sites habilitado, crear el proyecto remoto una sola vez y publicar el sitio para cualquier persona en Internet.
