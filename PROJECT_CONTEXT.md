@@ -120,6 +120,7 @@ La superficie para docentes es:
 - El diagnóstico no debe enviar ni almacenar respuestas.
 - El plugin se distribuye públicamente desde `https://github.com/gear-go/canvas-mds-build-week`.
 - La página de acceso debe entregar las instrucciones de instalación en Codex.
+- Los recorridos en español deben enlazar primero `README.es.md` y el índice `docs/es/README.md`; la documentación original en inglés se conserva.
 - Para un piloto acompañado se debe escribir a `gagomez@udd.cl`; la solicitud incluye nickname de GitHub, por qué se quiere usar y para qué curso, evaluación o proyecto.
 
 ## Diagnóstico interactivo

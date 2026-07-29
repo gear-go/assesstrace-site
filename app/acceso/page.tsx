@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = { title: "Instalar AssessTrace" };
 
 const repositoryUrl = "https://github.com/gear-go/canvas-mds-build-week";
-const installationUrl = `${repositoryUrl}#pilot-installation-from-github`;
+const spanishDocsUrl = `${repositoryUrl}/blob/main/docs/es/README.md`;
+const installationUrl = `${repositoryUrl}/blob/main/README.es.md#instalaci%C3%B3n-para-pilotos-desde-github`;
 const accessMail =
   "mailto:gagomez@udd.cl?subject=Piloto%20acompa%C3%B1ado%20de%20AssessTrace&body=Hola%20Germ%C3%A1n%3A%0A%0AQuisiera%20participar%20en%20un%20piloto%20acompa%C3%B1ado%20de%20AssessTrace.%0A%0AUsuario%20de%20GitHub%3A%0AInstituci%C3%B3n%20o%20unidad%3A%0ACurso%2C%20programa%20o%20contexto%20de%20uso%3A%0A%0A%C2%BFPor%20qu%C3%A9%20quiero%20utilizar%20AssessTrace%3F%0A%0A%C2%BFPara%20qu%C3%A9%20evaluaci%C3%B3n%2C%20curso%20o%20proyecto%20quiero%20utilizarlo%3F%0A%0AConfirmo%20que%20no%20incluir%C3%A9%20datos%20personales%20de%20estudiantes.%0A%0ASaludos%2C";
 
@@ -14,9 +15,9 @@ export default function AccessPage() {
         <div className="shell narrow-shell">
           <p className="brand-kicker dark-kicker">Plugin público · pilotos controlados</p>
           <h1>Instala AssessTrace desde GitHub y úsalo en Codex.</h1>
-          <p>El repositorio incluye el marketplace, las tres skills de AssessTrace · Canvas MDS, el motor determinista y la documentación. Puedes instalarlo directamente; si quieres acompañamiento para el primer caso, también puedes escribirnos.</p>
+          <p>El repositorio incluye el marketplace, las tres skills de AssessTrace · Canvas MDS, el motor determinista y documentación completa en español e inglés. La guía en español conduce la instalación; si quieres acompañamiento para el primer caso, también puedes escribirnos.</p>
           <div className="button-row">
-            <a className="button button-primary" href={installationUrl} target="_blank" rel="noreferrer">Abrir instalación en GitHub</a>
+            <a className="button button-primary" href={installationUrl} target="_blank" rel="noreferrer">Abrir instalación en español</a>
             <a className="button button-secondary" href={accessMail}>Solicitar piloto acompañado</a>
           </div>
         </div>
@@ -63,10 +64,13 @@ export default function AccessPage() {
         </ol>
         <div className="repository-callout">
           <div>
-            <strong>Repositorio, código y guía completa</strong>
-            <p>Revisa requisitos, límites actuales, pruebas y el modelo de seguridad antes de trabajar con un curso real.</p>
+            <strong>Documentación en español y código público</strong>
+            <p>La guía en español reúne instalación, seguridad, experiencia de evaluación, caso de referencia y materiales de publicación. La documentación original en inglés se mantiene disponible.</p>
           </div>
-          <a className="text-link" href={repositoryUrl} target="_blank" rel="noreferrer">github.com/gear-go/canvas-mds-build-week <span aria-hidden="true">↗</span></a>
+          <div className="repository-links">
+            <a className="text-link" href={spanishDocsUrl} target="_blank" rel="noreferrer">Ver documentación en español <span aria-hidden="true">↗</span></a>
+            <a className="text-link repository-link-secondary" href={repositoryUrl} target="_blank" rel="noreferrer">Repositorio e inglés <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
 

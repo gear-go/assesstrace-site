@@ -60,6 +60,7 @@ npm run build
 - La web no publica ni elimina contenido en Canvas.
 - AssessTrace no califica ni infiere autoría.
 - El plugin se instala desde el marketplace público en `https://github.com/gear-go/canvas-mds-build-week`.
+- La web dirige primero a la documentación en español y mantiene disponible la versión original en inglés.
 - Para un piloto acompañado se escribe a `gagomez@udd.cl` indicando nickname de GitHub, motivo y contexto de uso.
 
 ## Arquitectura

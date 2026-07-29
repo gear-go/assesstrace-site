@@ -300,6 +300,9 @@ ul, ol { margin-top: 0; }
 .repository-callout strong { color: var(--navy); font-size: 1.15rem; }
 .repository-callout p { max-width: 62ch; margin: 0.3rem 0 0; color: var(--muted); }
 .repository-callout .text-link { flex: none; margin-top: 0; color: var(--blue-deep); }
+.repository-links { display: grid; justify-items: end; gap: 0.45rem; flex: none; }
+.repository-links .text-link { margin-top: 0; }
+.repository-links .repository-link-secondary { color: var(--muted); font-size: 0.9rem; font-weight: 750; }
 .support-section { background: var(--mist); }
 .support-section .access-layout { align-items: start; }
 .support-section .access-layout > div:first-child > p { max-width: 58ch; margin-bottom: 1.5rem; color: var(--muted); }
@@ -425,6 +428,7 @@ ul, ol { margin-top: 0; }
   .weight-bar { min-height: 58px; font-size: 0.72rem; }
   .repository-callout { align-items: flex-start; flex-direction: column; }
   .repository-callout .text-link { overflow-wrap: anywhere; }
+  .repository-links { justify-items: start; width: 100%; }
   .install-steps li { grid-template-columns: 42px minmax(0, 1fr); gap: 0.75rem; }
   .install-steps pre { font-size: 0.78rem; }
 }

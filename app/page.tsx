@@ -8,7 +8,7 @@ const roles = [
   ["Motor determinista", "Verifica", "Comprueba trazabilidad, ponderaciones, decisiones pendientes y límites de seguridad."],
 ] as const;
 const referenceCaseUrl =
-  "https://github.com/gear-go/canvas-mds-build-week/blob/main/plugins/canvas-mds/assets/judge-case/reference/before-after.md";
+  "https://github.com/gear-go/canvas-mds-build-week/blob/main/plugins/canvas-mds/assets/judge-case/reference/before-after.es.md";
 
 export default function Home() {
   return (
@@ -95,7 +95,7 @@ export default function Home() {
               <strong>El poder está en cambiar lo que la evaluación puede demostrar.</strong>
               <p>No en vigilar más ni en automatizar la autoridad pedagógica.</p>
             </div>
-            <a className="button button-secondary" href={referenceCaseUrl} target="_blank" rel="noreferrer">Ver el caso técnico en GitHub</a>
+            <a className="button button-secondary" href={referenceCaseUrl} target="_blank" rel="noreferrer">Ver el caso completo en español</a>
           </div>
         </div>
       </section>
