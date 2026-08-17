@@ -68,7 +68,7 @@ La cuenta nueva debe seguir este orden:
 6. Crear el proyecto de Sites una sola vez:
    - título: `AssessTrace — Evidence by Design`;
    - slug sugerido: `assesstrace-udd`;
-   - descripción: `Rediseño de evaluación centrado en evidencia del proceso de aprendizaje, respaldado por UDD.`
+   - descripción: `Rediseño de evaluación centrado en evidencia del proceso de aprendizaje, respaldado por IDS-UDD.`
 7. Guardar inmediatamente el ID opaco devuelto como `project_id` en `.openai/hosting.json`.
 8. No volver a llamar a creación para esta carpeta después de persistir el ID.
 9. Confirmar y guardar el estado exacto del código.

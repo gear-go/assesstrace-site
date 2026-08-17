@@ -20,7 +20,7 @@ La tesis es hacer visible el proceso de aprendizaje en educación con IA. No con
 ## Reglas de contenido
 
 - Mantener AssessTrace como marca principal.
-- Mantener el respaldo UDD.
+- Mantener el respaldo del Instituto de Data Science UDD (IDS-UDD), sin atribuir el respaldo a la universidad en general.
 - Mantener `gagomez@udd.cl` como contacto.
 - Mantener el diagnóstico libre de datos personales.
 - No enviar ni almacenar respuestas del diagnóstico.

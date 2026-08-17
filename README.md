@@ -1,6 +1,6 @@
 # AssessTrace — Evidence by Design
 
-Sitio público de AssessTrace, respaldado por la Universidad del Desarrollo (UDD).
+Sitio público de AssessTrace, respaldado por el Instituto de Data Science UDD (IDS-UDD).
 
 AssessTrace ayuda a rediseñar la evaluación para que el proceso de aprendizaje deje evidencia en cursos donde se utiliza IA generativa. GPT-5.6 comprende y propone; el docente decide; un motor determinista verifica; Canvas MDS implementa estructuras controladas en Canvas.
 

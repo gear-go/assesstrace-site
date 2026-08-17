@@ -113,7 +113,7 @@ La superficie para docentes es:
 
 - Debe ser pública.
 - AssessTrace es la marca principal.
-- UDD aparece como respaldo.
+- IDS-UDD aparece como respaldo institucional.
 - La identidad utiliza colores institucionales.
 - Debe servir a docentes y a directivas no expertas en Codex.
 - Debe incluir un diagnóstico que genere el prompt inicial.
@@ -177,7 +177,7 @@ El acceso a la web, al diagnóstico y al repositorio del plugin es público. El 
 
 - Marca: AssessTrace.
 - Tagline/metodología: Evidence by Design.
-- Respaldo: Universidad del Desarrollo.
+- Respaldo: Instituto de Data Science UDD (IDS-UDD).
 - Adaptador: Canvas MDS.
 - Personalidad: clara, rigurosa y humana.
 - Evitar: vigilancia, claims inflados, lenguaje genérico de SaaS y promesas de automatización total.

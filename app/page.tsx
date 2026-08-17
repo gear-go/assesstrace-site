@@ -16,7 +16,7 @@ export default function Home() {
       <section className="hero hero-home">
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <p className="brand-kicker">AssessTrace · respaldado por UDD</p>
+            <p className="brand-kicker">AssessTrace · respaldado por IDS-UDD</p>
             <h1>El aprendizaje deja huella.</h1>
             <p className="hero-lead">Rediseña la evaluación para hacer visibles el razonamiento, las decisiones, la iteración, el feedback y el aporte individual en cursos donde se utiliza IA generativa.</p>
             <div className="button-row">

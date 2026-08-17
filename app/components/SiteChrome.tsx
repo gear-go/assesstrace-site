@@ -13,7 +13,7 @@ export function SiteHeader() {
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="AssessTrace, inicio">
           <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-          <span><strong>AssessTrace</strong><small>Evidence by Design · UDD</small></span>
+          <span><strong>AssessTrace</strong><small>Evidence by Design · IDS-UDD</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Navegación principal">
           {nav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div>
           <p className="footer-brand">AssessTrace</p>
           <p>El aprendizaje deja huella.</p>
-          <p className="footer-note">Producto respaldado por Universidad del Desarrollo. Canvas MDS es su primer adaptador técnico.</p>
+          <p className="footer-note">Producto respaldado por el Instituto de Data Science UDD. Canvas MDS es su primer adaptador técnico.</p>
         </div>
         <div className="footer-links">
           <Link href="/docentes">Para docentes</Link>
@@ -49,7 +49,7 @@ export function SiteFooter() {
         <div className="footer-contact">
           <p>Contacto</p>
           <a href="mailto:gagomez@udd.cl">gagomez@udd.cl</a>
-          <span>Universidad del Desarrollo · Chile</span>
+          <span>Instituto de Data Science UDD · Chile</span>
         </div>
       </div>
     </footer>
